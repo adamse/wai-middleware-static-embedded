@@ -13,7 +13,7 @@ import           Network.HTTP.Types (status200, status304)
 import           Network.Mime (defaultMimeLookup)
 import           Network.Wai
 
-static :: [(FilePath, BL.ByteString)] -> Middleware
+static :: [(FilePath, B.ByteString)] -> Middleware
 static files =
   let files' = map computeEtag files
   in \app req callback ->
@@ -34,7 +34,8 @@ static files =
       ]
 
 computeEtag
-  :: (FilePath, BL.ByteString)
+  :: (FilePath, B.ByteString)
   -> (FilePath, (BL.ByteString, B.ByteString))
 computeEtag (fp, bs) =
-  (fp, (bs, convertToBase Base16 (hashlazy bs :: Digest SHA1)))
+  let bs' = BL.fromStrict bs in
+  (fp, (bs', convertToBase Base16 (hashlazy bs' :: Digest SHA1)))
