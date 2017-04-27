@@ -1,7 +1,7 @@
 # Static embedded middleware
 
 A `middleware` to serve static files from memory. Works particularly
-well with `static-embedded`.
+well with `file-embed`.
 
 ## Example usage
 
