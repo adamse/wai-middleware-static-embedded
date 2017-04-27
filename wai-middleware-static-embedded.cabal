@@ -7,7 +7,7 @@ license:             BSD3
 license-file:        LICENSE
 author:              Adam Sandberg Eriksson
 maintainer:          adam@sandbergericsson.se
-copyright:           Copyright: (c) 2016 Adam Sandberg Eriksson
+copyright:           Copyright: (c) 2017 Adam Sandberg Eriksson
 category:            Web
 build-type:          Simple
 extra-source-files:  README.md

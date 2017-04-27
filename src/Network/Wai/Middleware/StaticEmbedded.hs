@@ -37,5 +37,5 @@ computeEtag
   :: (FilePath, B.ByteString)
   -> (FilePath, (BL.ByteString, B.ByteString))
 computeEtag (fp, bs) =
-  let bs' = BL.fromStrict bs in
-  (fp, (bs', convertToBase Base16 (hashlazy bs' :: Digest SHA1)))
+  let bs' = BL.fromStrict bs
+  in (fp, (bs', convertToBase Base16 (hashlazy bs' :: Digest SHA1)))
