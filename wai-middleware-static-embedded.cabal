@@ -26,7 +26,6 @@ library
                      , memory
                      , mime-types
                      , wai
-                     , wai-extra
                      , http-types
                      , text
 
